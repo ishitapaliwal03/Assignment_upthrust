@@ -72,7 +72,7 @@ class Loginoptions extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (context) =>  MobileLoginScreen()),
+                        MaterialPageRoute(builder: (context) =>  Loginwithphonenumber()),
                       );
                     },
                   ),

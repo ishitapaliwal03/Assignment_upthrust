@@ -6,12 +6,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 
 // Main Screen with Navigation
-class MainScreen extends StatefulWidget {
+class Navigationbarr extends StatefulWidget {
   @override
-  _MainScreenState createState() => _MainScreenState();
+  _Navigationbarr createState() => _Navigationbarr();
 }
 
-class _MainScreenState extends State<MainScreen> {
+class _Navigationbarr extends State<Navigationbarr> {
   int _selectedIndex = 0;
 
   final List<Widget> _screens = [

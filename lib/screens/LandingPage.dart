@@ -139,7 +139,7 @@ class _LandingPageState extends State<LandingPage> {
                       print("Selected city: ${cities[selectedCityIndex!]['name']}");
                       Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => MainScreen()));
+                          MaterialPageRoute(builder: (context) => Navigationbarr()));
 
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(

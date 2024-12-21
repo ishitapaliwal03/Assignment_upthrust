@@ -5,12 +5,12 @@ import 'package:flutter/services.dart';
 import 'package:http/http.dart' as http;
 
 import 'package:assignment/screens/OtpScreen.dart';
-class MobileLoginScreen extends StatefulWidget {
+class Loginwithphonenumber extends StatefulWidget {
   @override
-  _MobileLoginScreenState createState() => _MobileLoginScreenState();
+  _Loginwithphonenumber createState() => _Loginwithphonenumber();
 }
 
-class _MobileLoginScreenState extends State<MobileLoginScreen> {
+class _Loginwithphonenumber extends State<Loginwithphonenumber> {
   String selectedCountryCode = '+91';
   String selectedCountryFlag = '🇮🇳';
   final TextEditingController phoneController = TextEditingController();

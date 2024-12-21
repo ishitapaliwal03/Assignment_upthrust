@@ -240,9 +240,10 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Row(
                     children: [
                       buildRecommendationCard(
-                          context, screenWidth, screenHeight, "Recomended", 'assets/images/indorehp.png'),
+                          context, screenWidth, screenHeight, 'assets/images/indorehp.png'),
                       buildRecommendationCard(
-                          context, screenWidth, screenHeight, "Fresh Food", 'assets/images/indorehp1.png'),
+                          context, screenWidth, screenHeight, 'assets/images/indorehp1.png'),
+                      SizedBox(width: screenWidth*0.01,)
                     ],
                   ),
                 ),
@@ -290,41 +291,27 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  Widget buildRecommendationCard(BuildContext context, double screenWidth, double screenHeight, String label, String imagePath) {
+  Widget buildRecommendationCard(BuildContext context, double screenWidth, double screenHeight, String imagePath) {
     return Padding(
       padding: EdgeInsets.only(
-        top: screenHeight * 0.03,
+        top: screenHeight * 0.02,
         left: screenWidth * 0.08,
       ),
-      child: Container(
+      child:Container(
         width: screenWidth * 0.7,
-        height: screenHeight * 0.2,
+        height: screenHeight*0.2,
         decoration: BoxDecoration(
-          image: DecorationImage(
-            image: AssetImage(imagePath),
-            fit: BoxFit.cover,
-          ),
-          borderRadius: BorderRadius.all(Radius.circular(20)),
+          borderRadius: BorderRadius.circular(25),
+
         ),
-        child: Stack(
-          children: [
-            Padding(
-              padding: EdgeInsets.only(
-                top: screenHeight * 0.11,
-                left: screenWidth * 0.07,
-              ),
-              child: Text(
-                label,
-                style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w700,
-                  fontSize: screenWidth * 0.045,
-                ),
-              ),
-            ),
-          ],
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(35),
+          child: Image.asset(
+            imagePath
+          ),
         ),
       ),
+
     );
   }
 }
